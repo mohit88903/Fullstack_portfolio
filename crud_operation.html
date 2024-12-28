@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+button {
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+button:hover,
+button:focus { 
+  background-color: #16437E;
+  color: #ffffff;
+}
+
+button:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+button:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+  </style>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div class="container mt-3">
+  <h2>student details</h2>
+  <form  class="form">
+    <div class="mb-3 mt-3">
+        <label for="id">id:</label>
+        <input type="id" class="form-control" id="id" placeholder="Enter id" name="id">
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="userName">userName:</label>
+        <input type="userName" class="form-control" id="userName" placeholder="Enter userName" name="userName">
+      </div>
+    <div class="mb-3 mt-3">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="password">password:</label>
+      <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="confirmpassword">confirmpassword:</label>
+      <input type="confirmpassword" class="form-control" id="confirmpassword" placeholder="Enter confirmpassword" name="confirmpassword">
+    </div>
+    <div class="mb-3">
+    <button type="submit" class="btn btn-primary">submit</button>
+    <input  type="button" class="btn btn-primary" onclick="updatestudent()" value="update"/>
+      </div>
+  </div>
+  </div>
+ 
+  </form>
+</div>
+
+<h1 class="text-center">student details</h1>
+
+<div class="container mt-3">
+  <div class="input-group mb-3">
+    <input id="searchInput" type="text" class="form-control" placeholder="Search student details.....">
+    <button  id="searchButton" class="btn btn-success" type="submit">Go</button> 
+  </div>
+
+<div class="container">
+  <table class="table table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">userName</th>
+        <th scope="col">email</th>
+        <th scope="col">password</th>
+        <th scope="col">confirmpassword</th>
+        <th scope="col">action</th>
+
+      </tr>
+    </thead>
+    <tbody id="table_body11">
+    </tbody>
+  </table>
+</div>
+
+<script src="crud_operation.js"></script>
+
+</body>
+</html>
